@@ -7,61 +7,61 @@
 
 <h:head>
 </h:head>
-<body background="/resources/fondo2.jpg" >
-<font color="#FFFFFF" face="Comic Sans MS">
+<body background="/resources/PHOTO1.jpg" >
+<font color="#FFFFFF" face="Times New Roman">
     <h:form id="calculadora_form">
-        <h1 align="center"><big> Bienvenido a la Calculadora Estadistica! </big></h1>
+        <h1 align="center"><big> Welcome to the Statistical Calculator! </big></h1>
         <!--p:outputLabel
         value="Valor de la moda: #{calculadoraBean.getModa()}">
         </p:outputLabel-->
-        <h2> Ingrese la lista de numeros ha evaluar :</h2>
+        <h2>Enter the list of numbers:</h2>
         <span class="ui-float-label">
                     <p:inputText id="numbers" binding="#{numbers}" />
                 </span>
         <br></br>
         <h2> Resultados: </h2>
         <p:outputLabel
-                value="Numeros Ingresados : #{calculadoraBean.getNumbers()}">
+                value="Numbers : #{calculadoraBean.getNumbers()}">
         </p:outputLabel>
         <br></br>
         <p:outputLabel
-                value="Promedio : #{calculadoraBean.getPromedio()}">
+                value="Average : #{calculadoraBean.getPromedio()}">
         </p:outputLabel>
         <br></br>
         <p:outputLabel
-                value="Desviacion Estandar : #{calculadoraBean.getDevEstandar()}">
+                value="Standard deviation : #{calculadoraBean.getDevEstandar()}">
         </p:outputLabel>
         <br></br>
         <p:outputLabel
-                value="Varianza : #{calculadoraBean.getVarianza()}">
+                value="Variance : #{calculadoraBean.getVarianza()}">
         </p:outputLabel>
         <br></br>
         <p:outputLabel
-                value="Moda : #{calculadoraBean.getModa()}">
+                value="Fashion : #{calculadoraBean.getModa()}">
         </p:outputLabel>
         <br></br>
         <p:outputLabel
-                value="Total de numeros : #{calculadoraBean.getCantNumbers()}">
+                value="Total numbers : #{calculadoraBean.getCantNumbers()}">
         </p:outputLabel>
         <br></br>
         <br></br>
         <p:commandButton
-                value="Calcular Valores" actionListener="#{calculadoraBean.setNumbersWeb(numbers.value)}" update="calculadora_form" >
+                value="Calculate values" actionListener="#{calculadoraBean.setNumbersWeb(numbers.value)}" update="calculadora_form" >
         </p:commandButton>
         <br></br>
         <br></br>
         <p:dataTable value="#{calculadoraBean.getHistoria()}" var="item">
-            <p:column headerText="Historial De Numeros" filterMatchMode="contains" style="display:block; text-align:left">
+            <p:column headerText="Number history" filterMatchMode="contains" style="display:block; text-align:left">
                 <p:outputLabel value ="#{item}" style="display:block; text-align:center"/>
             </p:column>
         </p:dataTable>
         <br></br>
         <p:commandButton
-                value="Reiniciar" actionListener="#{calculadoraBean.restart()}" update="calculadora_form" >
+                value="Restart" actionListener="#{calculadoraBean.restart()}" update="calculadora_form" >
         </p:commandButton>
         <br></br>
         <br></br>
-        <p>Recuerde ingresar los numeros que desea evaluar en formato:</p>
+        <p>Remember to enter the numbers you want to evaluate seprardos by semicolons; :</p>
         <p>a;b;c;...</p>
     </h:form>
 </font>
