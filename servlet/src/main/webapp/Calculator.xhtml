@@ -6,13 +6,24 @@
       xmlns:f="http://java.sun.com/jsf/core">
 
 <h:head>
+	<style>
+        body {background-color: gray;}
+		header {background-color:black; width: 100%;}
+		section {background-color: white; width: 80%; margin: auto; padding-top: 50px; padding-right: 30px; padding-bottom: 50px; padding-left: 30px;}
+        h1   {color: white;}
+        p    {color: red;}
+    </style>
 </h:head>
-<body background="/resources/PHOTO1.jpg" >
-<font color="#FFFFFF" face="Times New Roman">
-    <h:form id="calculadora_form">
+<body >
+		<header>
         <h1 align="center"><big> Welcome to the Statistical Calculator! </big></h1>
+		</header>
+<section>
+<font color="#000000" face="Times New Roman">
+    <h:form id="calculadora_form">
+		
         <!--p:outputLabel
-        value="Valor de la moda: #{calculadoraBean.getModa()}">
+        value="Valor de la moda: #{calculatorBean.getModa()}">
         </p:outputLabel-->
         <h2>Enter the list of numbers:</h2>
         <span class="ui-float-label">
@@ -21,43 +32,43 @@
         <br></br>
         <h2> Resultados: </h2>
         <p:outputLabel
-                value="Numbers : #{calculadoraBean.getNumbers()}">
+                value="Numbers : #{calculatorBean.getNumbers()}">
         </p:outputLabel>
         <br></br>
         <p:outputLabel
-                value="Average : #{calculadoraBean.getPromedio()}">
+                value="Average : #{calculatorBean.getPromedio()}">
         </p:outputLabel>
         <br></br>
         <p:outputLabel
-                value="Standard deviation : #{calculadoraBean.getDevEstandar()}">
+                value="Standard deviation : #{calculatorBean.getDevEstandar()}">
         </p:outputLabel>
         <br></br>
         <p:outputLabel
-                value="Variance : #{calculadoraBean.getVarianza()}">
+                value="Variance : #{calculatorBean.getVarianza()}">
         </p:outputLabel>
         <br></br>
         <p:outputLabel
-                value="Fashion : #{calculadoraBean.getModa()}">
+                value="Fashion : #{calculatorBean.getModa()}">
         </p:outputLabel>
         <br></br>
         <p:outputLabel
-                value="Total numbers : #{calculadoraBean.getCantNumbers()}">
+                value="Total numbers : #{calculatorBean.getCantNumbers()}">
         </p:outputLabel>
         <br></br>
         <br></br>
         <p:commandButton
-                value="Calculate values" actionListener="#{calculadoraBean.setNumbersWeb(numbers.value)}" update="calculadora_form" >
+                value="Calculate values" actionListener="#{calculatorBean.setNumbersWeb(numbers.value)}" update="calculadora_form" >
         </p:commandButton>
         <br></br>
         <br></br>
-        <p:dataTable value="#{calculadoraBean.getHistoria()}" var="item">
+        <p:dataTable value="#{calculatorBean.getHistoria()}" var="item">
             <p:column headerText="Number history" filterMatchMode="contains" style="display:block; text-align:left">
                 <p:outputLabel value ="#{item}" style="display:block; text-align:center"/>
             </p:column>
         </p:dataTable>
         <br></br>
         <p:commandButton
-                value="Restart" actionListener="#{calculadoraBean.restart()}" update="calculadora_form" >
+                value="Restart" actionListener="#{calculatorBean.restart()}" update="calculadora_form" >
         </p:commandButton>
         <br></br>
         <br></br>
@@ -65,5 +76,6 @@
         <p>a;b;c;...</p>
     </h:form>
 </font>
+</section>
 </body>
 </html>
